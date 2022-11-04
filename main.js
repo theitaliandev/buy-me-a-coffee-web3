@@ -7,5 +7,7 @@ if (!window.ethereum) {
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log(event)
+    const formData = new FormData(event.target)
+    const amount = formData.get("amount")
+    console.log(amount)
 });
